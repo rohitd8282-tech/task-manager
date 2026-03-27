@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-shell">
+        <header class="app-header">
+            <h1>Task Manager</h1>
+            <p class="subtitle">Quickly add, finish, and manage your daily tasks with AI-powered suggestions.</p>
+        </header>
+
+        <section class="input-container">
+            <input class="task-input" id="taskInput" type="text" placeholder="Enter a new task">
+            <div class="button-row">
+                <button id="addTaskBtn" class="primary">Add Task</button>
+                <button id="suggestBtn" class="secondary">🧠 Suggest</button>
+                <button id="summarizeBtn" class="secondary">✨ Summarize</button>
+                <button id="polishBtn" class="secondary">🛠️ Polish</button>
+                <button id="clearCompletedBtn" class="secondary">Clear Completed</button>
+                <button id="clearAllBtn" class="secondary">Clear All</button>
+            </div>
+            <div class="meta-row">
+                <span id="taskCount" class="meta-chip">Tasks: 0</span>
+                <span id="completedCount" class="meta-chip">Completed: 0</span>
+                <span id="aiHint" class="meta-chip">AI: ready</span>
+            </div>
+            <div id="statusMessage" class="status-message" aria-live="polite"></div>
+        </section>
+
+        <main>
+            <ol id="taskList" class="task-list" aria-live="polite"></ol>
+            <div id="emptyState" class="empty-state">No tasks yet. Add one to get started.</div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
