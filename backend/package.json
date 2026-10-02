@@ -1,0 +1,20 @@
+{
+  "name": "task-manager-ai-backend",
+  "version": "1.0.0",
+  "description": "Backend for AI Task Manager",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@google/genai": "^2.27.0",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^4.22.3",
+    "openai": "^5.23.2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
