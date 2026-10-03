@@ -1,3 +1,5 @@
+const API_BASE_URL = "https://task-manager-tjr4.onrender.com";
+
 const taskInput = document.getElementById('taskInput');
 const taskList = document.getElementById('taskList');
 const emptyState = document.getElementById('emptyState');
@@ -225,7 +227,7 @@ async function polishTask() {
   setStatus('Polishing task with AI...', 'loading');
 
   try {
-    const res = await fetch('http://localhost:3000/polish', {
+    const res = await fetch(`${API_BASE_URL}/polish`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ task: inputValue }),
@@ -257,7 +259,7 @@ async function getSuggestion() {
   setStatus('Generating suggestion from AI...', 'loading');
 
   try {
-    const res = await fetch('http://localhost:3000/suggest', {
+    const res = await fetch(`${API_BASE_URL}/suggest`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ task: inputValue }),
@@ -288,7 +290,7 @@ async function summarizeTask() {
   setStatus('Generating summary from AI...', 'loading');
 
   try {
-    const res = await fetch('http://localhost:3000/summarize', {
+    const res = await fetch(`${API_BASE_URL}/summarize`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ task: inputValue }),
