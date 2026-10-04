@@ -1,6 +1,12 @@
 const API_BASE_URL = "https://task-manager-tjr4.onrender.com";
 
 const taskInput = document.getElementById('taskInput');
+function autoResizeTaskInput() {
+    taskInput.style.height = "auto";
+    taskInput.style.height = Math.min(taskInput.scrollHeight, 180) + "px";
+}
+
+taskInput.addEventListener("input", autoResizeTaskInput);
 const taskList = document.getElementById('taskList');
 const emptyState = document.getElementById('emptyState');
 const taskCount = document.getElementById('taskCount');

@@ -58,13 +58,25 @@ h1 {
 
 .task-input {
     width: 100%;
+    min-height: 55px;
+    max-height: 180px;
     padding: 14px 16px;
     border-radius: 12px;
     border: 1px solid rgba(124, 92, 186, 0.5);
     font-size: 1rem;
+    font-family: inherit;
     background: #fff;
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    resize: none;
+    overflow-y: auto;
+    line-height: 1.5;
+}
+
+.task-input:focus {
+    outline: none;
+    border-color: #5b3ec8;
+    box-shadow: 0 9px 25px rgba(38,0,109,0.3);
 }
 
 .task-input:focus {
